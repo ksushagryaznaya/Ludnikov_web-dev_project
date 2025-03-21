@@ -1,0 +1,206 @@
+#ordersHistory {
+    width:100%;
+    border-collapse: collapse;
+}
+
+#ordersHistory th {
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    height: 20px;
+    padding: 20px 15px;
+    white-space: nowrap;
+}
+
+.wholeOrder {
+    text-align: left;
+    padding: 20px 15px;
+
+}
+
+.actionButtonsCell {
+    width: 200px;
+}
+
+.orderHistoryRow {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+
+.historyButtons {
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color:rgb(138, 43, 226);
+}
+
+.historyButtons i {
+    font-size: 20px;
+}
+
+.historyButtons:hover {
+    background-color: rgb(65, 21, 106);
+}
+
+.historyButtons:active {
+    background-color: rgb(65, 21, 106);
+}
+
+#ordersHistory tr {
+    height: 100%;
+}
+
+#ordersHistory td {
+    height: 100%;
+    vertical-align: middle;
+}
+
+.delete-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: left;
+    z-index: 1000;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cross-button {
+    position: absolute;
+    top: 10px;    
+    right: 10px; 
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.yes-button, .cancel-button, .ok-button, .save-button {
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0px 5px;
+    font-size: 16px;
+}
+
+.yes-button {
+    background-color: rgb(242, 41, 41);
+    color: white;
+    border: none;
+}
+
+.cancel-button {
+    background-color: rgb(138, 43, 226);
+    color: white;
+    border: none;
+}
+
+.cancel-button:hover {
+    background-color: rgb(65, 21, 106);
+}
+
+.yes-button:hover {
+    background-color: rgb(173, 31, 31);
+}
+
+.ok-button {
+    background-color: rgb(138, 43, 226);
+    color: white;
+    border: none;
+    float: right;
+}
+
+.ok-button:hover {
+    background-color: rgb(65, 21, 106);
+}
+
+
+.save-button {
+    background-color: rgb(21, 170, 26);
+    color: white;
+    border: none;
+}
+
+.save-button:hover {
+    background-color: rgb(14, 122, 18);
+}
+
+.deleteConfBtn-container {
+    display:flex;
+    justify-content: flex-end;
+    width:100%;
+    margin-top: 20px;
+}
+
+.details-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    z-index: 1000;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+    font-family: Arial, sans-serif;
+}
+
+.details-box td {
+    vertical-align: top;
+}
+
+.edit-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    z-index: 1000;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+    font-family: Arial, sans-serif;
+}
+
+.edit-box td {
+    vertical-align: top;
+}
+
+.edit-box input, .edit-box select {
+    width: 200px;
+}
+
+.comment-section {
+    width: 300px;
+    min-height: 100px;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.details-table th:first-child, .details-table td:first-child {
+    width: 150px; 
+}
+
+.buttons-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}

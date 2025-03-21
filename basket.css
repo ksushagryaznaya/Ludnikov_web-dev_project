@@ -1,0 +1,67 @@
+#catalogLink {
+    text-decoration: none;
+    color: rgb(138, 43, 226);
+}
+
+#catalogLink:hover {
+    color: rgb(104, 33, 171);
+}
+
+#empty {
+    text-align: center;
+}
+
+#orderFormContainer {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.form-cols {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 600px;
+}
+
+.form-right-column, .form-left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 10px;
+}
+
+input, textarea, #delTime {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#deliveryPrice {
+    font-size: 15px;
+    color: #6c757d;
+}
+
+#totalPrice {
+    padding: 0;
+    margin: 0;
+}
+
+#resetB:hover, #postB:hover {
+    background-color: rgb(138, 43, 226);
+}
+
+#chosen-container {
+    margin-top: 20px;
+    max-height: 800px;
+    overflow-y: auto;
+
+}
