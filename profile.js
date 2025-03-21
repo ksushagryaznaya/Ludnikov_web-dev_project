@@ -10,7 +10,6 @@ async function loadOrders() {
             throw new Error(`Ошибка HTTP: ${response.status}`);
         }
         const data = await response.json();
-        console.log("ИСТОРИЯ ЗАКАЗОВ ЗАГРУЖЕНА: ", data);
         orders = data;        
     } catch (error) {
         console.error("Ошибка при загрузке данных:", error);
@@ -171,8 +170,6 @@ function detailsWindow(orderID) {
     table.appendChild(tbody);
 
     const order = orders.find(order => order.id === orderID);
-    console.log("ВОТ ЗАКАЗ>>>>>", order);
-
     const data = {
         created_at: dateReformer(order.created_at),
         delivery: {
@@ -187,8 +184,6 @@ function detailsWindow(orderID) {
         total_price: countPrice(order.good_ids) + ' ₽',
         comment: order.comment,
     };
-
-    console.log(data.items);
 
     const rows = [
         ["Дата оформления", data.created_at],
@@ -320,7 +315,6 @@ function editWindow(orderID) {
     table.appendChild(tbody);
 
     const order = orders.find(order => order.id === orderID);
-    console.log("ВОТ ЗАКАЗ>>>>>", order);
 
     const data = {
         created_at: dateReformer(order.created_at),
@@ -336,8 +330,6 @@ function editWindow(orderID) {
         total_price: countPrice(order.good_ids) + ' ₽',
         comment: order.comment,
     };
-
-    console.log(data.items);
 
     const rows = [
         ["Дата оформления", data.created_at],
@@ -475,8 +467,6 @@ function editWindow(orderID) {
             comment: document.getElementById("editComment").value.trim(),
         };
     
-        console.log("Обновлённые данные для отправки:", updatedData);
-
         await editOrder(orderID, updatedData);
         location.reload();
     });
@@ -507,8 +497,6 @@ function displayOrders() {
 
         let fullPrice = 500;
         let wholeOrder = '';
-
-        console.log(order.good_ids);
 
         for (let i = 0; i < order.good_ids.length; i++) {
             const currentItem = items.find(item => 
@@ -607,7 +595,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 throw new Error(`Ошибка HTTP: ${response.status}`);
             }
             const suggestions = await response.json();
-            console.log("Ответ API:", suggestions);
             if (!Array.isArray(suggestions)) {
                 throw new Error("API вернуло не массив!");
             }

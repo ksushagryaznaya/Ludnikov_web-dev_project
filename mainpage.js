@@ -151,7 +151,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 throw new Error(`Ошибка HTTP: ${response.status}`);
             }
             const suggestions = await response.json();
-            console.log("Ответ API:", suggestions);
             if (!Array.isArray(suggestions)) {
                 throw new Error("API вернуло не массив!");
             }
